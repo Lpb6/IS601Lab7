@@ -1,6 +1,6 @@
 // Question 1: Odd or even
 function oddEven() {
-  let number = prompt('Please enter the value to be checked');
+  const number = document.querySelector('#oddEven').value;
   let msg;
   if (number % 2 === 0) {
     msg = `${number} is even`;
@@ -13,9 +13,9 @@ document.querySelector('#question1').addEventListener('click', oddEven);
 
 // Question 2: largest of 3 numbers
 function maxofthree() {
-  let number1 = prompt('Enter the first number');
-  let number2 = prompt('Enter the second number');
-  let number3 = prompt('Enter the third number');
+  const number1 = document.querySelector('#num1').value;
+  const number2 = document.querySelector('#num2').value;
+  const number3 = document.querySelector('#num3').value;
   const max = Math.max(Number(number1), Number(number2), Number(number3));
   console.log(max);
   msg = `The largest of the three numbers is ${max}`;
@@ -40,8 +40,8 @@ document.querySelector('#question3').addEventListener('click', fibonacci);
 // Question 4: Replace characters
 function replaceChars() {
   const inputString = document.querySelector('#string').value;
-  let replaceChar = prompt('Please enter the character to be replaced');
-  let newChar = prompt('Enter the new character');
+  const replaceChar = document.querySelector('#replaceChar').value;
+  const newChar = document.querySelector('#newChar').value;
 
   newString = inputString.replaceAll(replaceChar, newChar);
   document.getElementById('answer4').innerHTML = newString;
